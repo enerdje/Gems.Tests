@@ -8,17 +8,17 @@ namespace QuadEq.Tests
         [TestCase(2, 5, -3.5)]
         [TestCase(1, 1, 1)]
         [TestCase(1, 4, 1)]
-        [TestCase(0, 4, 1)] //Первый коэф. не может быть нулём.
+        [TestCase(0, 4, 1)] //РџРµСЂРІС‹Р№ РєРѕСЌС„. РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РЅСѓР»С‘Рј.
         public void Solution_Test(double a, double b, double c)
         {
             bool result = Program.Solution(a, b, c);
             Assert.IsTrue(result);
         }
 
-        #region Описание
-        //Тест на корректный вход данных
-        //Можно сделать перегрузку метода без out параметров. 
-        //Не выгодно перегружать метод ради теста и в реалиях это не всегда возможно.
+        #region РћРїРёСЃР°РЅРёРµ
+        //РўРµСЃС‚ РЅР° РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІС…РѕРґ РґР°РЅРЅС‹С…
+        //РњРѕР¶РЅРѕ СЃРґРµР»Р°С‚СЊ РїРµСЂРµРіСЂСѓР·РєСѓ РјРµС‚РѕРґР° Р±РµР· out РїР°СЂР°РјРµС‚СЂРѕРІ. 
+        //РќРµ РІС‹РіРѕРґРЅРѕ РїРµСЂРµРіСЂСѓР¶Р°С‚СЊ РјРµС‚РѕРґ СЂР°РґРё С‚РµСЃС‚Р° Рё РІ СЂРµР°Р»РёСЏС… СЌС‚Рѕ РЅРµ РІСЃРµРіРґР° РІРѕР·РјРѕР¶РЅРѕ.
         #endregion
         [Test] 
         public void CorrectWrite_Test()
@@ -27,7 +27,7 @@ namespace QuadEq.Tests
             foreach (string i in Test)
             {
                 bool result = Program.CorrectWrite(i, out _, out _, out _);
-                Assert.IsTrue(result, $"Ошибка в строке: ({i})");
+                Assert.IsTrue(result, $"РћС€РёР±РєР° РІ СЃС‚СЂРѕРєРµ: ({i})");
             }
         }
     }
