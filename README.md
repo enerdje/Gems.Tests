@@ -8,3 +8,4 @@
 Задание № 2: "WebTests"
 Для корректного запуска необходимо загрузить Chrome Web Driver 81 и разместить его в папке со сборкой/юнит-тестами.
 Ссылка для загрузки драйвера: https://chromedriver.chromium.org/downloads
+Для проверки результатов теста использовал онлайн сервис для решения квадратного уравнения: https://ru.onlinemschool.com/math/assistance/equation/quadratic/
