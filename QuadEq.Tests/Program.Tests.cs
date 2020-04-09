@@ -15,11 +15,18 @@ namespace QuadEq.Tests
             Assert.IsTrue(result);
         }
 
-        #region Описание
+        [TestCase(1, 0, 1, ExpectedResult = "Уравнение не имеет действительных решений.")]
+        [TestCase(2, 5, -3.5d, ExpectedResult = "-3,0700274723201293 0,5700274723201295")]
+        [TestCase(1, 1, 1, ExpectedResult = "Уравнение не имеет действительных решений.")]
+        [TestCase(1, 4, 1, ExpectedResult = "-3,732050807568877 -0,2679491924311228")]
+        [TestCase(0, 4, 1, ExpectedResult = "Ошибка. Первый коэф. не может быть 0.")]
+        public string Solution_Test_2(double a, double b, double c)
+        {
+            string result = Program.Solution(a, b, c, 0);
+            return result;
+        }
+
         //Тест на корректный вход данных
-        //Можно сделать перегрузку метода без out параметров. 
-        //Не выгодно перегружать метод ради теста и в реалиях это не всегда возможно.
-        #endregion
         [Test]
         public void CorrectWrite_Test()
         {

@@ -75,5 +75,25 @@ namespace QuadEq
             Console.WriteLine("============================================");
             return (a == 0) ? false : true;
         }
+
+        //Перегруженый метод для сверки значений.
+        public static string Solution(double a, double b, double c, int _)
+        {
+            if (a != 0)
+            {
+                double D = b * b - 4 * a * c;
+                switch (D)
+                {
+                    case double d when d > 0:
+                        return $"{((-b - Math.Sqrt(D)) / (2 * a))} {((-b + Math.Sqrt(D)) / (2 * a))}";
+                    case double d when d == 0:
+                        return $"{(-b / (2 * a))}";
+                    case double d when d < 0:
+                        return "Уравнение не имеет действительных решений.";
+                }
+                return "";
+            }
+            else { return "Ошибка. Первый коэф. не может быть 0."; }
+        }
     }
 }
