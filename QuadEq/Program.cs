@@ -17,7 +17,7 @@ namespace QuadEq
                 string inputLine;
                 while ((inputLine = sr.ReadLine()) != null)
                 {
-                    if (CorrectWrite(inputLine, out double a, out double b, out double c)) 
+                    if (CorrectWrite(inputLine, out double a, out double b, out double c))
                         Solution(a, b, c);
                     else Console.WriteLine($"Некорректная строка: {inputLine}\n{s}");
                 }
@@ -34,7 +34,7 @@ namespace QuadEq
                     Console.WriteLine("Для продолжения нажмите любую клавишу.");
                     Console.ReadKey();
                     Console.Clear();
-                }    
+                }
             }
             #endregion
         }

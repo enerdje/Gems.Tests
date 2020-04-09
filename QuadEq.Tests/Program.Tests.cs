@@ -20,10 +20,10 @@ namespace QuadEq.Tests
         //Можно сделать перегрузку метода без out параметров. 
         //Не выгодно перегружать метод ради теста и в реалиях это не всегда возможно.
         #endregion
-        [Test] 
+        [Test]
         public void CorrectWrite_Test()
         {
-            string[] Test = new string[] {"1 2 5", "10 4 2", "11 1 5", "1 1 1", "2 6 4"};
+            string[] Test = new string[] { "1 2 5", "10 4 2", "11 1 5", "1 1 1", "2 6 4" };
             foreach (string i in Test)
             {
                 bool result = Program.CorrectWrite(i, out _, out _, out _);
