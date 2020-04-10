@@ -5,9 +5,7 @@
 В сборке поддерживается чтение из файла и ручной ввод.
 Для корректной работы режима чтения из файла необходимо переместить файл "Gems.Tests/QuadEq/Tests.txt" в папку со сборкой. 
 
-
 Задание № 2: "WebTests"
-Для корректного запуска необходимо загрузить Chrome Web Driver 81 и разместить его в папке со сборкой/юнит-тестами.
-Ссылка для загрузки драйвера: https://chromedriver.chromium.org/downloads
-Для проверки результатов теста использовал онлайн сервис для решения квадратного уравнения:
-https://ru.onlinemschool.com/math/assistance/equation/quadratic/
+Для корректного запуска необходимо загрузить [Chrome Web Driver 81](https://chromedriver.chromium.org/downloads) и разместить его в папке со сборкой/юнит-тестами.
+Для проверки результатов теста использовал [онлайн сервис](https://ru.onlinemschool.com/math/assistance/equation/quadratic/) для решения квадратного уравнения.
+
