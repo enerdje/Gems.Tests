@@ -13,9 +13,6 @@ namespace WebTests
         {
             ContentBlocks(blocks);
             IsLinkExists(url, blocks[1]);
-            Console.WriteLine("Для завершения нажмите любую клавишу.");
-            Console.ReadKey();
-            Browser.Quit();
         }
 
         public static bool ContentBlocks(string[] blocks)
@@ -26,9 +23,14 @@ namespace WebTests
             {
                 foreach (string block in blocks)
                 { IWebElement Element = Browser.FindElement(By.ClassName(block)); }
+                Browser.Quit();
                 return true;
             }
-            catch (NoSuchElementException) { return false; }
+            catch (NoSuchElementException) 
+            {
+                Browser.Quit();
+                return false; 
+            }
         }
 
         public static bool IsLinkExists(string url, string block)
@@ -39,9 +41,14 @@ namespace WebTests
                 Browser.Navigate().GoToUrl("https://gemsdev.ru/geometa/");
                 IWebElement Element = Browser.FindElement(By.ClassName(block));
                 IWebElement Url = Browser.FindElement(By.CssSelector($"[href*='{url}']"));
+                Browser.Quit();
                 return true;
             }
-            catch (NoSuchElementException) { return false; }
+            catch (NoSuchElementException) 
+            {
+                Browser.Quit();
+                return false; 
+            }
         }
     }
 }

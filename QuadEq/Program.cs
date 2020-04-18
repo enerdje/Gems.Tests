@@ -46,25 +46,11 @@ namespace QuadEq
                             break;
                     }
                 }
-                else Console.WriteLine("Ошибка! Вы ввели не число.");
+                else Console.WriteLine($"{s}Ошибка! Вы ввели не число.");
             }
         }
 
-        //Перегруженый метод для сверки значений.
-        public static string Solution(string input, int _)
-        {
-            InputValidation(input, out double a, out double b, out double c);
-            double D = b * b - 4 * a * c;
-            return D switch
-            {
-                double d when d > 0 => $"{((-b - Math.Sqrt(D)) / (2 * a))} {((-b + Math.Sqrt(D)) / (2 * a))}",
-                double d when d == 0 => $"{(-b / (2 * a))}",
-                double d when d < 0 => "Уравнение не имеет действительных решений.",
-                _ => "",
-            };
-        }
-
-        public static bool Solution(string input)
+        public static string Solution(string input)
         {
             try
             {
@@ -73,25 +59,17 @@ namespace QuadEq
                 Console.WriteLine($"{s}Считано на входе: ({a}) ({b}) ({c})");
                 Console.WriteLine($"Составлено уравнение: {a}x^2 + {b}x + {c} = 0");
                 Console.WriteLine($"Дискриминант равен: {D}");
-                switch (D)
+                return D switch
                 {
-                    case double d when d > 0:
-                        Console.WriteLine($"Первый корень равен: {((-b - Math.Sqrt(D)) / (2 * a))}\n" +
-                                          $"Второй корень равен: {((-b + Math.Sqrt(D)) / (2 * a))}");
-                        break;
-                    case double d when d == 0:
-                        Console.WriteLine($"Корень равен: {(-b / (2 * a))}");
-                        break;
-                    case double d when d < 0:
-                        Console.WriteLine("Уравнение не имеет действительных решений.");
-                        break;
-                }
-                return true;
+                    double d when d > 0 => $"{((-b - Math.Sqrt(D)) / (2 * a))} {((-b + Math.Sqrt(D)) / (2 * a))}",
+                    double d when d == 0 => $"{(-b / (2 * a))}",
+                    double d when d < 0 => "Уравнение не имеет действительных решений.",
+                    _ => "",
+                };
             }
             catch (Exception e)
             {
-                Console.WriteLine($"{s}Ошибка: {e.Message}");
-                return false;
+                return $"{s}Ошибка: {e.Message}";
             }
         }
 
