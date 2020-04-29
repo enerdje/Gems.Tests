@@ -49,7 +49,7 @@ namespace QuadEq
                 else Console.WriteLine($"{s}Ошибка! Вы ввели не число.");
             }
         }
-
+        //gfdgfdgdfgdfgfd
         public static string Solution(string input)
         {
             try
