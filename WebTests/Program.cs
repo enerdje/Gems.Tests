@@ -57,6 +57,7 @@ namespace WebTests
     public static class Tests
     {
         [Test]
+        //Test
         public static void ContentBlocks_Test()
         {
             string[] blocks = new string[] { "my-150", "gos-system", "urban-analytics", "other-products" };
